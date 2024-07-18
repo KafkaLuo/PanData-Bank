@@ -1,0 +1,46 @@
+<!-- Modified by Luo Jing, Fan Lingyun -->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" rel="styleSheet">
+    <title>Home</title>
+</head>
+<body>
+<div th:insert="~{common/header}"></div>
+<div class="maincontents">
+    <div class="welcome_area">
+<!--        <p>Welcome, <span class="welcome_name" th:inline="text"><span th:remove="tag" sec:authentication="name"></span></span> !</p>-->
+        <p>Welcome, <span class="welcome_name" th:text="${accountName}"></span> (<span th:text="${accountId}"></span>)! Email:<span th:text="${accountEmail}"></span></p>
+    </div>
+    <div class="balance_area">
+        <div class="balance_area_inner">
+            <p class="balance_title">Account Balance</p>
+            <p th:each="balance : ${balance}" class="balance">
+                <span class="yen">¥</span><span th:text="${balance}" class="money"></span>
+            </p>
+        </div>
+    </div>
+    <a href="transaction_form.html" th:href="@{/transaction}" class="transaction_area"><!-- "@{/issues}" @ はthymeleafでリンクを表す記法 -->
+        <span class="transaction_text">Transfer</span>
+    </a>
+    <a href="transaction_list.html" th:href="@{/transferrecord}" class="transaction_area"><!-- "@{/issues}" @ はthymeleafでリンクを表す記法 -->
+        <span class="transaction_text">Transaction History</span>
+    </a>
+<!--    <a href="remove_list.html" th:href="@{/remove}" class="remove_area">-->
+<!--        <span class="remove_text">Remove Transaction</span>-->
+<!--    </a>-->
+    <a href="bankDeposit_list.html" th:href="@{/bankDeposit}" class="remove_area">
+        <span class="remove_text">Deposit</span>
+    </a>
+    <a href="bankWithdraw_list.html" th:href="@{/bankWithdraw}" class="remove_area">
+        <span class="remove_text">Withdraw</span>
+    </a>
+</div>
+</body>
+</html>

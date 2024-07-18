@@ -1,0 +1,60 @@
+{
+  "mysqlBank.accounts": {
+    "transaction": true,
+    "partition-key": [
+      "accountId"
+    ],
+    "columns": {
+      "accountId": "TEXT",
+      "password": "TEXT",
+      "name": "TEXT",
+      "balance": "INT",
+	    "accountEmail": "TEXT"
+    }
+  },
+  "mysqlBank.transactions": {
+    "transaction": true,
+    "partition-key": [
+      "transactionId"
+    ],
+    "columns": {
+      "transactionId": "TEXT",
+      "fromTable": "TEXT",
+      "fromId": "TEXT",
+      "toTable": "TEXT",
+      "toId": "TEXT",
+      "amount": "INT",
+      "date": "TEXT",
+      "flag": "INT"
+    }
+  },
+  "postgreBank.accounts": {
+    "transaction": true,
+    "partition-key": [
+      "accountId"
+    ],
+    "columns": {
+      "accountId": "TEXT",
+      "password": "TEXT",
+      "name": "TEXT",
+      "balance": "INT",
+	    "accountEmail": "TEXT"
+    }
+  },
+  "postgreBank.transactions": {
+    "transaction": true,
+    "partition-key": [
+      "transactionId"
+    ],
+    "columns": {
+      "transactionId": "TEXT",
+      "fromTable": "TEXT",
+      "fromId": "TEXT",
+      "toTable": "TEXT",
+      "toId": "TEXT",
+      "amount": "INT",
+      "date": "TEXT",
+      "flag": "INT"
+    }
+  }
+}

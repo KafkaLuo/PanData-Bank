@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* html */
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    margin:0px;
+    background: url(images/bg.jpg) no-repeat;
+    background-size:100% 100%;
+    background-attachment:fixed;
+}
+
+.maincontents {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #4285f4, #34a853);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.welcome_area, .balance_area, .transaction_area, .remove_area {
+    margin: 20px 0;
+}
+
+.welcome_name, .balance, .transaction_text, .remove_text {
+    color: #fff;
+}
+
+.balance_title {
+    font-weight: bold;
+}
+
+.yen {
+    font-size: 0.8em;
+}
+
+.money {
+    font-size: 1.2em;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+}
+
+.transaction_area, .remove_area {
+    display: block;
+    padding: 10px 20px;
+    background: #34a853;
+    border-radius: 25px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.transaction_area:hover, .remove_area:hover {
+    background: #2e8540;
+}
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+#head_contents_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoArea {
+    width: 100px;
+    height: 40px;
+    /*background-color: #fff;*/
+}
+
+form {
+    margin: 0;
+}
+
+input[type="submit"] {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #34a853;
+}
+.login_execute{
+    color: #051F4E;
+}
+

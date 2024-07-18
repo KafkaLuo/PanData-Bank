@@ -1,0 +1,75 @@
+<!-- Modified by Luo Jing, Fan Lingyun -->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" rel="styleSheet">
+
+</head>
+<body>
+<div id="header">
+    <div id="head_contents_top">
+        <div id="logoArea"></div>
+    </div>
+</div>
+<div class="maincontents">
+    <div class="error_text" th:if="${param.error}">
+        Invalid user id and password.
+    </div>
+    <div class="logout_text" th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form th:action="@{/login}" method="post" class="login_form">
+        <div><label> User ID : <input type="text" name="username"/> </label></div>
+        <div><label> Password : <input type="password" name="password"/> </label></div>
+        <div><input class="login_execute" type="submit" value="Sign In"/></div>
+        <span>Don't have an account? <a  th:href="@{/register}">Register Now</a></span>
+    </form>
+</div>
+</body>
+<style>
+    .login_form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .login_form label {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .login_form input[type="text"],
+    .login_form input[type="password"],
+    .login_form input[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    .login_form input[type="submit"] {
+        background-color: #337ab7;
+        border: none;
+        cursor: pointer;
+    }
+
+    .login_form input[type="submit"]:hover {
+        background-color: #235a8b;
+    }
+
+    .login_form span {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+</html>
+

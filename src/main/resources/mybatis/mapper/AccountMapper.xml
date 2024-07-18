@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.test.dao.AccountDao">
+    <select id="getAccountEntityById" parameterType="string" resultType="com.example.test.models.entities.AccountEntity">
+        SELECT * FROM accounts WHERE accountId = #{accountId}
+    </select>
+
+    <insert id="addAccountEntity" parameterType="com.example.test.models.entities.AccountEntity">
+        INSERT INTO accounts (accountId, accountName, accountPassword,accountEmail) VALUES (#{accountId}, #{accountName}, #{accountPassword},#{accountEmail})
+    </insert>
+
+    <update id="updateAccountEntity" parameterType="com.example.test.models.entities.AccountEntity">
+        UPDATE accounts SET accountName = #{accountName}, accountPassword = #{accountPassword} ,accountEmail =#{accountEmail} WHERE accountId = #{accountId}
+    </update>
+
+    <delete id="deleteAccountEntity" parameterType="string">
+        DELETE FROM accounts WHERE accountId = #{accountId}
+    </delete>
+</mapper>
+
