@@ -1,6 +1,5 @@
 # PanData Bank (ScalarDB Application)
 
----
 
 This file introduces the transaction application using ScalarDB for database course and provides a start tutorial.
 
