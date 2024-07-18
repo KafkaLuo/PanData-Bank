@@ -15,7 +15,6 @@ Our work:
 
 ## Prerequisites
 
----
 
 - Programming
     - Java (OpenJDK 17)
@@ -30,7 +29,6 @@ Our work:
 
 ## Team Contributions
 
----
 
 Luo Jing:
 
@@ -45,7 +43,6 @@ Fan Lingyun:
 
 ## Run the Application
 
----
 
 1. Clone this repository
 2. Open this project in your local IDE (recommend IntelliJ IDEA)
@@ -56,7 +53,6 @@ Fan Lingyun:
 
 ## Initialization
 
----
 
 ### Create Databases
 
@@ -110,7 +106,6 @@ spring.datasource.type: com.zaxxer.hikari.HikariDataSource
 
 ## System Workflow
 
----
 
 After creating and connecting the databases, tables will be automatically created in MySQL and PostgreSQL when the application starts, as described below:
 
